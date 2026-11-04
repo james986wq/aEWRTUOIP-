@@ -1,0 +1,9 @@
+services:
+  origin:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    restart: unless-stopped
